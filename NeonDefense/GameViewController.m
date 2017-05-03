@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "GameScene.h"
+#import "GameKitHelper.h"
 
 @implementation SKScene (Unarchive)
 
@@ -33,13 +34,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = NO;
     skView.showsNodeCount = NO;
     /* Sprite Kit applies additional optimizations to improve rendering performance */
-    skView.ignoresSiblingOrder = YES;
+//    skView.ignoresSiblingOrder = YES;
     
     // Create and configure the scene.
     GameScene *scene = [GameScene sceneWithSize:skView.bounds.size];    //This replaced the default bounds.
@@ -49,19 +50,48 @@
     [skView presentScene:scene];
 }
 
+// Registering for a PresentAuthenticationViewController notification and making a call to the authenticateLocalPlayer method of GameKitHelper.
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(showAuthenticationViewController)
+     name:PresentAuthenticationViewController
+     object:nil];
+    
+    [[GameKitHelper sharedGameKitHelper]
+     authenticateLocalPlayer];
+}
+
+// Invoked when the PresentAuthenticationViewController notification is received, and presents the authentication view over the parentViewController.
+- (void)showAuthenticationViewController {
+    GameKitHelper *gameKitHelper =
+    [GameKitHelper sharedGameKitHelper];
+    
+    [self.parentViewController presentViewController:
+     gameKitHelper.authenticationViewController
+                                         animated:YES
+                                       completion:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (BOOL)shouldAutorotate
 {
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskAllButUpsideDown;
-    } else {
-        return UIInterfaceOrientationMaskAll;
-    }
-}
+//- (NSUInteger)supportedInterfaceOrientations
+//{
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+//        return UIInterfaceOrientationMaskAllButUpsideDown;
+//    } else {
+//        return UIInterfaceOrientationMaskAll;
+//    }
+//}
 
 - (void)didReceiveMemoryWarning
 {

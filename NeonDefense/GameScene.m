@@ -10,6 +10,9 @@
 #import "GameMenu.h"
 #import "Ball.h"
 #import <AVFoundation/AVFoundation.h>
+#import <GameKit/GameKit.h>
+#import <AudioToolbox/AudioToolbox.h>
+
 
 @implementation GameScene
 
@@ -503,6 +506,7 @@ static inline float randomInRange(CGFloat low, CGFloat high) {
         [self addExplosion:firstBody.node.position withName:@"HaloExplosion"];
         [self addExplosion:secondBody.node.position withName:@"BlockExplosion"];
         [self runAction:_explosionSound];
+        [self vibrate];
         
         // Add HaloBomb Identifier. OK
         if ([[firstBody.node.userData valueForKey:@"Bomb"] boolValue]) {
@@ -532,6 +536,7 @@ static inline float randomInRange(CGFloat low, CGFloat high) {
         [self addExplosion:secondBody.node.position withName:@"LifeBarExplosion"];
         [self runAction:_deepExplosionSound];
         [secondBody.node removeFromParent];
+        [self vibrate];
         [self gameOver];
     }
     
@@ -607,8 +612,9 @@ static inline float randomInRange(CGFloat low, CGFloat high) {
         NSLog(@"MULTI SHOT POWER-UP REMOVED");
     }];
     
-    // Current Score and Saving Top Score.
+    // Current Score, Reporting Score and Saving Top Score.
     _menu.score = self.score;
+    [self reportScore];
     if (self.score > _menu.topScore) {
         _menu.topScore = self.score;
         [_userDefaults setInteger:self.score forKey:kALTopScoreKey];
@@ -763,6 +769,25 @@ static inline float randomInRange(CGFloat low, CGFloat high) {
     }
 }
 
+
+// Reporting score to Game Center.
+- (void)reportScore {
+    GKScore *bestScore = [[GKScore alloc] initWithLeaderboardIdentifier:@"NeonDefense_Best_Score"];
+    bestScore.value = self.score;
+    bestScore.context = 0;
+    
+    [GKScore reportScores:@[bestScore] withCompletionHandler:^(NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"%@", [error localizedDescription]);
+        }
+    }];
+}
+
+
+// Implementing vibration
+- (void)vibrate {
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
 
 
 @end

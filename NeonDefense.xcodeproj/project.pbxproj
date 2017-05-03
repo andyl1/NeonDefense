@@ -54,6 +54,10 @@
 		18422DD01B596E8C00B19141 /* ShieldUp.caf in Resources */ = {isa = PBXBuildFile; fileRef = 18422DC81B596E8C00B19141 /* ShieldUp.caf */; };
 		18422DD11B596E8C00B19141 /* Zap.caf in Resources */ = {isa = PBXBuildFile; fileRef = 18422DC91B596E8C00B19141 /* Zap.caf */; };
 		18422DE21B59ADB500B19141 /* BlueBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18422DE11B59ADB500B19141 /* BlueBar@2x.png */; };
+		187E6BBA1C595B8000B0F9BF /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E6BB91C595B8000B0F9BF /* GameKit.framework */; };
+		187E6BBE1C5963BD00B0F9BF /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E6BBD1C5963BD00B0F9BF /* GameKitHelper.m */; };
+		187E6BC01C5CE1FE00B0F9BF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E6BBF1C5CE1FE00B0F9BF /* AudioToolbox.framework */; };
+		18C378A31C96131F00E9F727 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C378A21C96131F00E9F727 /* AVFoundation.framework */; };
 		18FC5F661B6500A0002E3F4A /* BlueBar320@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FC5F631B6500A0002E3F4A /* BlueBar320@2x.png */; };
 		18FC5F671B6500A0002E3F4A /* BlueBar375@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FC5F641B6500A0002E3F4A /* BlueBar375@2x.png */; };
 		18FC5F681B6500A0002E3F4A /* BlueBar414@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FC5F651B6500A0002E3F4A /* BlueBar414@2x.png */; };
@@ -124,7 +128,7 @@
 		18422DA71B596E7800B19141 /* ScoreBoard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScoreBoard@2x.png"; sourceTree = "<group>"; };
 		18422DA81B596E7800B19141 /* Starfield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Starfield@2x.png"; sourceTree = "<group>"; };
 		18422DA91B596E7800B19141 /* Title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Title@2x.png"; sourceTree = "<group>"; };
-		18422DC21B596E8C00B19141 /* BlockExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlockExplosion.sks; sourceTree = "<group>"; };
+		18422DC21B596E8C00B19141 /* BlockExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = BlockExplosion.sks; path = Sounds/BlockExplosion.sks; sourceTree = "<group>"; };
 		18422DC31B596E8C00B19141 /* Bounce.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bounce.caf; sourceTree = "<group>"; };
 		18422DC41B596E8C00B19141 /* DeepExplosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DeepExplosion.caf; sourceTree = "<group>"; };
 		18422DC51B596E8C00B19141 /* Explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Explosion.caf; sourceTree = "<group>"; };
@@ -134,6 +138,11 @@
 		18422DC91B596E8C00B19141 /* Zap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zap.caf; sourceTree = "<group>"; };
 		18422DD81B59A02F00B19141 /* NeonDefense.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeonDefense.profdata; sourceTree = "<group>"; };
 		18422DE11B59ADB500B19141 /* BlueBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlueBar@2x.png"; sourceTree = "<group>"; };
+		187E6BB91C595B8000B0F9BF /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		187E6BBC1C5963BD00B0F9BF /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
+		187E6BBD1C5963BD00B0F9BF /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
+		187E6BBF1C5CE1FE00B0F9BF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		18C378A21C96131F00E9F727 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		18FC5F631B6500A0002E3F4A /* BlueBar320@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlueBar320@2x.png"; sourceTree = "<group>"; };
 		18FC5F641B6500A0002E3F4A /* BlueBar375@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlueBar375@2x.png"; sourceTree = "<group>"; };
 		18FC5F651B6500A0002E3F4A /* BlueBar414@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlueBar414@2x.png"; sourceTree = "<group>"; };
@@ -151,6 +160,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C378A31C96131F00E9F727 /* AVFoundation.framework in Frameworks */,
+				187E6BC01C5CE1FE00B0F9BF /* AudioToolbox.framework in Frameworks */,
+				187E6BBA1C595B8000B0F9BF /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +179,9 @@
 		18422D461B596B7700B19141 = {
 			isa = PBXGroup;
 			children = (
+				18C378A21C96131F00E9F727 /* AVFoundation.framework */,
+				187E6BBF1C5CE1FE00B0F9BF /* AudioToolbox.framework */,
+				187E6BB91C595B8000B0F9BF /* GameKit.framework */,
 				18422D511B596B7700B19141 /* NeonDefense */,
 				18422D701B596B7700B19141 /* NeonDefenseTests */,
 				18422D501B596B7700B19141 /* Products */,
@@ -186,6 +201,7 @@
 		18422D511B596B7700B19141 /* NeonDefense */ = {
 			isa = PBXGroup;
 			children = (
+				187E6BBB1C59638200B0F9BF /* GameKit */,
 				18422D801B596CBC00B19141 /* Ball */,
 				18422D841B596D8600B19141 /* Menu */,
 				18422DD31B596F8100B19141 /* Main */,
@@ -259,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				18422D871B596E2A00B19141 /* BallTrail.sks */,
+				18422DC21B596E8C00B19141 /* BlockExplosion.sks */,
 				18422D881B596E2A00B19141 /* BounceExplosion.sks */,
 				18422D891B596E2A00B19141 /* HaloExplosion.sks */,
 				18422D8A1B596E2A00B19141 /* LifeBarExplosion.sks */,
@@ -310,7 +327,6 @@
 		18422DC11B596E8C00B19141 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				18422DC21B596E8C00B19141 /* BlockExplosion.sks */,
 				18422DC31B596E8C00B19141 /* Bounce.caf */,
 				18422DC41B596E8C00B19141 /* DeepExplosion.caf */,
 				18422DC51B596E8C00B19141 /* Explosion.caf */,
@@ -348,6 +364,16 @@
 				18422DD81B59A02F00B19141 /* NeonDefense.profdata */,
 			);
 			path = OptimizationProfiles;
+			sourceTree = "<group>";
+		};
+		187E6BBB1C59638200B0F9BF /* GameKit */ = {
+			isa = PBXGroup;
+			children = (
+				187E6BBC1C5963BD00B0F9BF /* GameKitHelper.h */,
+				187E6BBD1C5963BD00B0F9BF /* GameKitHelper.m */,
+			);
+			name = GameKit;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,12 +420,20 @@
 		18422D471B596B7700B19141 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Andy Lee";
 				TargetAttributes = {
 					18422D4E1B596B7700B19141 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = EU8Z97B5WG;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					18422D6C1B596B7700B19141 = {
 						CreatedOnToolsVersion = 6.4;
@@ -501,6 +535,7 @@
 				18422D831B596D7E00B19141 /* GameMenu.m in Sources */,
 				18422D7F1B596C9700B19141 /* Ball.m in Sources */,
 				18422D601B596B7700B19141 /* GameViewController.m in Sources */,
+				187E6BBE1C5963BD00B0F9BF /* GameKitHelper.m in Sources */,
 				18422D581B596B7700B19141 /* AppDelegate.m in Sources */,
 				18422D5B1B596B7700B19141 /* GameScene.m in Sources */,
 				18422D551B596B7700B19141 /* main.m in Sources */,
@@ -566,6 +601,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -581,7 +617,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -618,7 +654,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -631,10 +667,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NeonDefense/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -645,10 +684,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NeonDefense/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -667,6 +709,7 @@
 				);
 				INFOPLIST_FILE = NeonDefenseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeonDefense.app/NeonDefense";
 			};
@@ -682,6 +725,7 @@
 				);
 				INFOPLIST_FILE = NeonDefenseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeonDefense.app/NeonDefense";
 			};

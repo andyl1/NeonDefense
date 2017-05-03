@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <SpriteKit/SpriteKit.h>
 #import "GameScene.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -19,6 +20,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
+    
+    NSError *error;
+    BOOL success = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:&error];
+    if (!success) {
+        //Handle error
+        NSLog(@"%@", [error localizedDescription]);
+    } else {
+        NSLog(@"Yay! It worked!");
+    }
+    
     return YES;
 }
 
